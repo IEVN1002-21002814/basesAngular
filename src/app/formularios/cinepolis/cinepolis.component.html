@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEPOLIS</title>
+</head>
+<body>
+    <section class="container p-2">
+        <div class="row">
+            <div class="col-4">
+                <form [formGroup]="formulario">
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" formControlName="nombre" >
+                      <div  class="form-text">Ingresa tu nombre</div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-8">
+                            <label for="compradores" class="form-label">Cantidad Compradores</label>
+                            <input type="number" class="form-control" formControlName="compradores">
+                        </div>
+
+                        <div class="mb-3 col-4">
+                            <label for="boletos" class="form-label">No. Boletos</label>
+                            <input type="number" class="form-control" formControlName="boletos">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="compradores" class="form-label">Tarjeta Cinepolito</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tarjeta" formControlName="tarjeta" value="si">
+                            <label class="form-check-label" for="tarjeta2">
+                            Si
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tarjeta" formControlName="tarjeta" checked value="no">
+                            <label class="form-check-label" for="tarjeta2">
+                            no
+                            </label>
+                        </div>
+                    </div>
+                     
+                    <button (click)="sumarCostoBoletos()" class="btn btn-primary">Submit</button>
+                  </form>
+
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-4">SubTotal: {{valorTotal}}</div>
+                    <div class="col-4">Total: {{ValorDescuento}}</div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

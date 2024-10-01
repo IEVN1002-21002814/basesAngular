@@ -12,6 +12,7 @@ export class Ejemplo1Component implements OnInit{
   formulario!: FormGroup;
   resultado!:number;
 
+
   constructor(){
 
   }
